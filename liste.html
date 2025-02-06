@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du Film</title>
+</head>
+<body>
+    <div id="film-detail"></div>
+    <script>
+        let params = new URLSearchParams(window.location.search);
+        let index = params.get('index');
+        let dataMovies = localStorage.getItem("Movies")
+            ? JSON.parse(localStorage.getItem("Movies"))
+            : [];
+
+        if (index !== null && dataMovies[index]) {
+            let movie = dataMovies[index];
+            document.getElementById('film-detail').innerHTML = `
+                <h3>${movie.Titre}</h3>
+                <p>Réalisateur: ${movie.Realisateur}</p>
+                <p>Genre: ${movie.genre}</p>
+                <p>Année: ${movie.Année}</p>
+                <img src="${movie.image}" alt="${movie.Titre}" width="200">
+            `;
+        } else {
+            document.getElementById('film-detail').innerHTML = '<p>Film non trouvé.</p>';
+        }
+        
+    </script>
+</body>
+</html>
