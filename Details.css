@@ -22,38 +22,18 @@ body{
     margin-top: 20px;
     margin-bottom: 50px;
 }
-.film1{
-    color: white;
-    display: flex;
-   gap: 20px;
-   margin-left: 10px;
-   
-   
-    
-}
-#text{
-    line-height: 35px;
-}
-.button{
-    display: flex;
-    gap: 30px;
-    justify-content: center;
 
-}
-#modifier{
-    background-color: rgb(21, 110, 67) ;
+#edit-btn{
+    background-color: rgb(87, 177, 233) ;
     border-radius: 10px;
     border: none;
     width: 100px;
+    height: 40px;
 }
-#supprimer{
+#delete-btn{
     background-color: rgb(163, 10, 10) ;
     border-radius: 10px;
     border: none;
     width: 100px;
-}
-.card-body{
-    width: 18rem;
-    height: 10rem;
-
+    height: 40px;
 }
